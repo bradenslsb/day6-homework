@@ -1,0 +1,70 @@
+$background-color: #9ba1b0;
+$flag-color: #32adcf;
+$text: black;
+
+@mixin hover {
+  &:hover {
+    .links {
+      color: #0ba33b;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@mixin links {
+  .links {
+    color: $text;
+    text-decoration: none;
+    padding: 2px;
+    
+  }
+}
+
+body {
+  margin: 0px;
+  .webpage{
+    .navbar {
+      height: 4em;
+      width: 100%;
+      background-color: $flag-color;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      @include links;
+      @include hover;
+      font-size: 2em;
+      }
+    .main-content {
+      height: 900px;
+      width: 100%;
+      background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-wallpaper-background-027.jpg");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      .summary {
+        width: 15em;
+        background-color: white;
+        opacity: 0.5;
+        padding: 20px;
+        border: 2px solid black;
+      }
+    }
+    .footer {
+      height: 2em;
+      width: 100%;
+      background-color: $flag-color;
+      @include links;
+      @include hover;
+      font-size: 20px;
+      .bottom-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  
+    }
+  
+}
